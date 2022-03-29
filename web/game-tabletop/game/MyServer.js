@@ -4,6 +4,7 @@
  */
 class MyServer {
 	constructor() {
+        this.host = '127.0.0.1';
         this.port = 8081;
     }
 
@@ -16,7 +17,7 @@ class MyServer {
     promiseRequest(requestString, onSuccess, onError) {
         return new Promise((resolve, reject) => {
             let request = new XMLHttpRequest();
-            request.open('GET', 'http://localhost:' + this.port + '/' + requestString, true);
+            request.open('GET', 'http://' + this.host + ':' + this.port + '/' + requestString, true);
 
             request.onload = onSuccess || function(data) {
                 console.log("Request received. Reply: ", JSON.parse(data.target.response));
