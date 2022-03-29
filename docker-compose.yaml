@@ -15,9 +15,4 @@ services:
       - 80:80 
     depends_on:
       - web
-
-  backend:
-    build: ./backend
-    ports:
-      - 8081:8081
   
