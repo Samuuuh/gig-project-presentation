@@ -4,7 +4,7 @@
  */
 class MyServer {
 	constructor() {
-        this.host = '127.0.0.1';
+        this.host = 'samuh.tech';
         this.port = 8081;
     }
 
